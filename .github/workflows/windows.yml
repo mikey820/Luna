@@ -14,7 +14,7 @@ jobs:
     runs-on: windows-2022
     steps:
     - name: Checkout Git Repo
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Fixup PATH
       run: |
@@ -26,7 +26,7 @@ jobs:
         mingw32-make -j4 CC=gcc
 
     - name: Upload zip
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
           name: luna-win64
           path: "luna.exe"
